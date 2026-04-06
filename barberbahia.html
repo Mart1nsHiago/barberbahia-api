@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barber Bahia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<div id="page-home" class="page active">
+  <nav>
+    <div class="logo-wrap">
+      <div class="logo-barber"><span class="r">BARBER</span> <span class="b">BAHIA</span></div>
+      <div class="logo-bahia">ESTILO & TRADIÇÃO</div>
+    </div>
+    <ul>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="nav-book" onclick="openBooking()">Agendar Agora</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">A Melhor de Brasília</div>
+      <h1>BARBER<br/><span class="r">BA</span><span class="b">HIA</span><span class="o">.</span></h1>
+      <p class="hero-sub">Onde a tradição encontra a modernidade. Sinta a experiência de um corte premium.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openBooking()">Agendar Horário</button>
+        <a href="#servicos" class="btn-outline">Ver Serviços</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-right-bg"></div>
+      <div class="hero-icon">✂️</div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">EM Desenvolvimento<span>+</span></div>
+          <div class="hero-stat-label">Anos de Experiência</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">Em Desenvolvimento<span>+</span></div>
+          <div class="hero-stat-label">Clientes Satisfeitos</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">Em Desenvolvimento<span>+</span></div>
+          <div class="hero-stat-label">Avaliação Google</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <div class="ticker-item">Corte Masculino</div>
+      <div class="ticker-item">Barba Completa</div>
+      <div class="ticker-item">Degradê Americano</div>
+      <div class="ticker-item">Pigmentação</div>
+      <div class="ticker-item">Toalha Quente</div>
+      <div class="ticker-item">Corte Masculino</div>
+      <div class="ticker-item">Barba Completa</div>
+      <div class="ticker-item">Degradê Americano</div>
+      <div class="ticker-item">Pigmentação</div>
+      <div class="ticker-item">Toalha Quente</div>
+    </div>
+  </div>
+
+  <section id="servicos" class="services">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">Nossos Serviços</div>
+        <h2>PREMIUM CUTS</h2>
+      </div>
+      <p>Oferecemos o que há de melhor em cuidados masculinos, com profissionais altamente qualificados.</p>
+    </div>
+    <div class="srv-list">
+      <div class="srv-row">
+        <div class="srv-idx">01</div>
+        <div>
+          <div class="srv-name">Corte Masculino</div>
+          <div class="srv-desc">Tesoura, máquina ou degradê.</div>
+        </div>
+        <div class="srv-price">R$ 55</div>
+      </div>
+      <div class="srv-row">
+        <div class="srv-idx">02</div>
+        <div>
+          <div class="srv-name">Barba Completa</div>
+          <div class="srv-desc">Modelagem + toalha quente.</div>
+        </div>
+        <div class="srv-price">R$ 45</div>
+      </div>
+      <div class="srv-row">
+        <div class="srv-idx">03</div>
+        <div>
+          <div class="srv-name">Combo Corte + Barba</div>
+          <div class="srv-desc">O combo completo para o seu estilo.</div>
+        </div>
+        <div class="srv-price">R$ 90</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <div class="about-vis">
+      <div class="about-big">BAHIA</div>
+      <div class="about-pill">
+        <div class="about-pill-num">100%</div>
+        <div class="about-pill-lbl">Qualidade Garantida</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="sec-tag">Sobre Nós</div>
+      <h2>TRADIÇÃO E ESTILO EM CADA DETALHE</h2>
+      <p>A Barber Bahia nasceu da paixão pela barbearia clássica. Localizada no coração de Brasília, oferecemos um ambiente exclusivo para o homem moderno que não abre mão da tradição.</p>
+      <p>Nossa missão é elevar sua autoestima através de um atendimento personalizado e técnicas de ponta.</p>
+      <div class="tags">
+        <span class="tag">Profissionalismo</span>
+        <span class="tag">Higiene</span>
+        <span class="tag">Conforto</span>
+        <span class="tag">Estilo</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>PRONTO PARA MUDAR SEU VISUAL?</h2>
+    <button class="btn-cta" onclick="openBooking()">Agendar Agora</button>
+  </div>
+
+  <section id="contato" class="hours">
+    <div class="hours-block">
+      <h3>Horários</h3>
+      <div class="hours-row"><span>Segunda - Sexta</span><span>09:00 - 19:00</span></div>
+      <div class="hours-row"><span>Sábado</span><span>09:00 - 17:00</span></div>
+      <div class="hours-row"><span>Domingo</span><span>Fechado</span></div>
+    </div>
+    <div class="hours-block">
+      <h3>Localização</h3>
+      <div class="h-addr">
+        <strong>Barber Bahia — Unidade Central</strong>
+        Setor Comercial Sul, Quadra 05<br/>
+        Brasília - DF, 70305-000
+      </div>
+    </div>
+    <div class="hours-block">
+      <h3>Contato</h3>
+      <div class="h-addr">Dúvidas ou cancelamentos?</div>
+      <a href="tel:61995203082" class="h-phone">(61) 9 9520-3082</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-copy">© 2026 BARBER BAHIA. TODOS OS DIREITOS RESERVADOS.</div>
+    <div class="foot-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+</div>
+
+<div id="page-book" class="page">
+  <div class="book-nav">
+    <button class="book-back" onclick="closeBooking()">← Voltar ao Site</button>
+    <div class="book-steps">
+      <div class="step" id="step-1"><div class="step-num">1</div> Identificação</div>
+      <div class="step" id="step-2"><div class="step-num">2</div> Data e Hora</div>
+      <div class="step" id="step-3"><div class="step-num">3</div> Serviços</div>
+      <div class="step" id="step-4"><div class="step-num">4</div> Pagamento</div>
+    </div>
+  </div>
+
+  <div class="book-container">
+    <!-- PANEL 1: IDENTIFICAÇÃO -->
+    <div class="panel" id="panel-1">
+      <h2>Quem é você?</h2>
+      <p class="panel-sub">Precisamos de alguns dados para o seu agendamento.</p>
+      <div class="form-grid">
+        <div class="field-group" id="fg-name">
+          <label>Nome Completo</label>
+          <input type="text" id="inp-name" placeholder="Ex: João Silva">
+          <span class="error-msg">Por favor, insira seu nome completo.</span>
+        </div>
+        <div class="field-group" id="fg-phone">
+          <label>WhatsApp</label>
+          <input type="text" id="inp-phone" placeholder="(00) 0 0000-0000">
+          <span class="error-msg">Insira um WhatsApp válido.</span>
+        </div>
+      </div>
+      
+      <button class="btn-send" onclick="if(validateStep1()) sendCode(); else {alert('Preencha os campos corretamente.'); document.getElementById('inp-name').focus();}">Enviar Código</button>
+      
+      <div class="verify-status-bar" id="verify-status-bar">
+        <div class="verify-status pending"></div>
+        <div class="verify-txt" id="verify-status-txt">Aguardando envio do código</div>
+      </div>
+
+      <div class="code-section" id="code-section" style="display:none">
+        <p style="font-size:.8rem;text-align:center;color:var(--silver)">Insira o código de 4 dígitos enviado ao seu WhatsApp:</p>
+        <div class="code-inputs">
+          <input type="text" id="cd0" maxlength="1" oninput="digitInput(this,0)" onkeydown="digitKey(event,0)">
+          <input type="text" id="cd1" maxlength="1" oninput="digitInput(this,1)" onkeydown="digitKey(event,1)">
+          <input type="text" id="cd2" maxlength="1" oninput="digitInput(this,2)" onkeydown="digitKey(event,2)">
+          <input type="text" id="cd3" maxlength="1" oninput="digitInput(this,3)" onkeydown="digitKey(event,3)">
+        </div>
+        <div class="resend-box">
+          Não recebeu? <button id="btn-send-code" onclick="sendCode()" style="background:none;border:none;color:var(--gold);cursor:pointer;text-decoration:underline">Reenviar Código</button>
+          <span id="resend-timer"></span>
+        </div>
+        <button class="btn-verify" id="btn-verify-code" onclick="verifyCode()" disabled>Verificar Código</button>
+      </div>
+
+      <div class="verify-ok-block" id="verify-ok-block" style="display:none">
+        <p style="color:var(--green);font-weight:700">✓ NÚMERO VERIFICADO</p>
+      </div>
+
+      <button class="btn-next" id="btn-after-verify" onclick="goStep(2)" disabled>Próximo Passo</button>
+    </div>
+
+    <!-- PANEL 2: CALENDÁRIO -->
+    <div class="panel" id="panel-2">
+      <h2>Escolha a Data</h2>
+      <p class="panel-sub">Selecione o melhor dia para você.</p>
+      <div class="cal-wrap">
+        <div class="cal-head">
+          <div class="cal-month" id="cal-month-label">Março 2026</div>
+          <div class="cal-nav">
+            <button onclick="changeMonth(-1)">←</button>
+            <button onclick="changeMonth(1)">→</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+
+      <div class="slots-section" id="slots-section" style="display:none">
+        <h3 style="font-family:'Bebas Neue';font-size:1.5rem;margin-bottom:1rem">Horários para <span id="slots-date-label" style="color:var(--gold)"></span></h3>
+        <div class="slots-grid" id="slots-grid"></div>
+      </div>
+
+      <button class="btn-next" id="btn-step3-next" onclick="goStep(3)" disabled style="margin-top:2rem">Próximo Passo</button>
+      <button class="btn-prev-step" onclick="goStep(1)">← Voltar</button>
+    </div>
+
+    <!-- PANEL 3: SERVIÇOS -->
+    <div class="panel" id="panel-3">
+      <h2>O que vamos fazer?</h2>
+      <p class="panel-sub">Selecione um ou mais serviços.</p>
+      <div class="srv-checks" id="srv-checks"></div>
+      <button class="btn-next" id="btn-step4-next" onclick="goStep(4)" disabled style="margin-top:2rem">Próximo Passo</button>
+      <button class="btn-prev-step" onclick="goStep(2)">← Voltar</button>
+    </div>
+
+    <!-- PANEL 4: PAGAMENTO -->
+    <div class="panel" id="panel-4">
+      <h2>Resumo e Pagamento</h2>
+      <p class="panel-sub">Confira os detalhes e realize o pagamento da entrada.</p>
+      <div class="summary-box" id="summary-box"></div>
+      <div class="pix-box">
+        <h3>Pagamento da Entrada — PIX</h3>
+        <p class="pix-sub">Escaneie o QR Code ou copie a chave PIX</p>
+        <div class="pix-amount" id="pix-amount"></div>
+        <div id="qrcode-container"></div>
+        <div class="pix-key-box">
+          <span class="pix-key">hiagomartins55@hotmail.com</span>
+          <button class="btn-copy" id="btn-copy-pix" onclick="copyPix()">Copiar Chave</button>
+        </div>
+        <p style="font-size:.73rem;color:var(--dim);margin-top:.4rem">Tipo: E-mail · Beneficiário: Barber Bahia</p>
+      </div>
+      <div class="pix-instruction-box" id="pix-instruction-box">
+        <div class="pix-inst-icon">📋</div>
+        <div class="pix-inst-text">
+          <strong>Como Funciona:</strong>
+          <ol style="margin: 0.5rem 0 0 1rem;">
+            <li>Realize o PIX para a chave acima</li>
+            <li>Seu agendamento será confirmado automaticamente após recebermos o pagamento</li>
+            <li>Você receberá uma confirmação via WhatsApp</li>
+          </ol>
+          <p style="margin-top: 0.8rem; font-size: 0.75rem; color: var(--dim);">⏱️ Aguardando confirmação do PIX...</p>
+        </div>
+      </div>
+      <div class="no-refund-box">
+        <div class="no-refund-icon">⚠️</div>
+        <div class="no-refund-text">
+          <strong>⛔ VALOR NÃO REEMBOLSÁVEL</strong>
+          O valor da entrada garante sua vaga. Para remarcações, entre em contato com 24h de antecedência.
+        </div>
+      </div>
+      <div class="contact-support-box" style="background: rgba(66, 135, 245, 0.08); border: 1px solid rgba(66, 135, 245, 0.2); padding: 1rem; border-radius: 6px; text-align: center; margin-top: 1.5rem;">
+        <p style="font-size: 0.8rem; color: var(--silver); margin: 0;">Não recebeu a confirmação em alguns minutos?</p>
+        <a href="javascript:void(0)" onclick="contactSupport()" style="color: var(--gold); text-decoration: underline; font-weight: 600; font-size: 0.8rem;">Contate nosso suporte via WhatsApp</a>
+      </div>
+      <button class="btn-prev-step" onclick="goStep(3)">← Voltar</button>
+    </div>
+
+    <!-- PANEL 5: SUCESSO -->
+    <div class="panel" id="panel-6">
+      <div class="success-wrap">
+        <div class="success-icon">✂️</div>
+        <h2>Agendado com Sucesso!</h2>
+        <p>Seu horário está reservado! Clique abaixo para enviar o comprovante no WhatsApp.</p>
+        <div class="success-details" id="success-details"></div>
+        <a id="wpp-link" href="#" class="wpp-btn" target="_blank">📲 Enviar Comprovante no WhatsApp</a>
+        <br/>
+        <button class="btn-prev-step" style="max-width:320px;margin:1rem auto 0;display:block" onclick="closeBooking()">← Voltar ao Site</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
