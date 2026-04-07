@@ -31,9 +31,9 @@ async function sendWhatsAppCode(phoneNumber, name, code) {
       to: fullPhone,
       type: 'template',
       template: {
-        name: 'barber_code_verification', // O seu template aprovado!
+        name: 'hello_world', // O seu template aprovado!
         language: {
-          code: 'pt_br' // Certifique-se de que o idioma corresponde ao do template
+          code: 'en_USr' // Certifique-se de que o idioma corresponde ao do template
         },
         components: [
           {
