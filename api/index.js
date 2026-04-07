@@ -33,7 +33,7 @@ async function sendWhatsAppCode(phoneNumber, name, code) {
       template: {
         name: 'hello_world', // O seu template aprovado!
         language: {
-          code: 'en_USr' // Certifique-se de que o idioma corresponde ao do template
+          code: 'en_US' // Certifique-se de que o idioma corresponde ao do template
         },
         components: [
           {
