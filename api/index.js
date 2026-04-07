@@ -26,26 +26,17 @@ async function sendWhatsAppCode(phoneNumber, name, code) {
     const cleanPhone = phoneNumber.replace(/\D/g, '');
     const fullPhone = cleanPhone.startsWith('55') ? cleanPhone : `55${cleanPhone}`;
 
-    const payload = {
-      messaging_product: 'whatsapp',
-      to: fullPhone,
-      type: 'template',
-      template: {
-        name: 'hello_world', // O seu template aprovado!
-        language: {
-          code: 'en_US' // Certifique-se de que o idioma corresponde ao do template
-        },
-        components: [
-          {
-            type: 'body',
-            parameters: [
-              { type: 'text', text: name || 'Cliente' }, // {{1}} - Nome
-              { type: 'text', text: String(code) }       // {{2}} - Código
-            ]
-          }
-        ]
+const payload = {
+    messaging_product: 'whatsapp',
+    to: fullPhone,
+    type: 'template',
+    template: {
+      name: 'hello_world', // O seu template aprovado!
+      language: {
+        code: 'en_US' // Certifique-se de que o idioma corresponde ao do template
       }
-    };
+    }
+  };
 
     const response = await fetch(WHATSAPP_API_URL, {
       method: 'POST',
