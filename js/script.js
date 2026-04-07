@@ -104,7 +104,7 @@ async function sendCode(){
 
   try {
     // 🚀 CHAMA O NOSSO SERVIDOR NODE.JS AO INVÉS DE ABRIR O WHATSAPP WEB
-    const response = await fetch('https://bb0ed7ce-024f-4f25-a257-674af36dee21-00-1kd4kr3w9fxhs.spock.replit.dev/api/send-code', {
+    const response = await fetch('/api/send-code', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: name, phone: phone })
@@ -175,7 +175,7 @@ async function verifyCode(){
   btn.textContent='Verificando...';
 
   try{
-    const response=await fetch('https://bb0ed7ce-024f-4f25-a257-674af36dee21-00-1kd4kr3w9fxhs.spock.replit.dev/api/verify-code',{
+    const response=await fetch('/api/verify-code',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({phone,code:entered})
@@ -449,3 +449,5 @@ new IntersectionObserver((entries)=>{
 },{threshold:.1}).observe&&document.querySelectorAll('.reveal').forEach(el=>{
   new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});},{threshold:.1}).observe(el);
 });
+
+module.exports = app;
