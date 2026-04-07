@@ -31,10 +31,19 @@ const payload = {
     to: fullPhone,
     type: 'template',
     template: {
-      name: 'hello_world', // O seu template aprovado!
+      name: 'ticket_barbearia', // Usando o seu template que JÁ ESTÁ APROVADO!
       language: {
-        code: 'en_US' // Certifique-se de que o idioma corresponde ao do template
-      }
+        code: 'pt_BR'
+      },
+      components: [
+        {
+          type: 'body',
+          parameters: [
+            { type: 'text', text: name || 'Cliente' }, // Para o {{1}} (Provavelmente o Nome)
+            { type: 'text', text: String(code) }       // Para o {{2}} (O código de 4 dígitos)
+          ]
+        }
+      ]
     }
   };
 
