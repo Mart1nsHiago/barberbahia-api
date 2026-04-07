@@ -28,22 +28,12 @@ async function sendWhatsAppCode(phoneNumber, name, code) {
 
 const payload = {
     messaging_product: 'whatsapp',
+    recipient_type: 'individual',
     to: fullPhone,
-    type: 'template',
-    template: {
-      name: 'ticket_barbearia', // Usando o seu template que JÁ ESTÁ APROVADO!
-      language: {
-        code: 'pt_BR'
-      },
-      components: [
-        {
-          type: 'body',
-          parameters: [
-            { type: 'text', text: name || 'Cliente' }, // Para o {{1}} (Provavelmente o Nome)
-            { type: 'text', text: String(code) }       // Para o {{2}} (O código de 4 dígitos)
-          ]
-        }
-      ]
+    type: 'text',
+    text: { 
+      preview_url: false,
+      body: `💈 *Barber Bahia*\n\nOlá, seu código de verificação é: *${code}*\n\nPara sua segurança, não compartilhe este código.`
     }
   };
 
