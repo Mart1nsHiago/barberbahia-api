@@ -26,24 +26,28 @@ async function sendWhatsAppCode(phoneNumber, name, code) {
     const cleanPhone = phoneNumber.replace(/\D/g, '');
     const fullPhone = cleanPhone.startsWith('55') ? cleanPhone : `55${cleanPhone}`;
 
-const payload = {
-    messaging_product: 'whatsapp',
-    recipient_type: 'individual',
-    to: fullPhone,
-    type: 'text',
-    text: { 
-      preview_url: false,
-      body: `💈 *Barber Bahia*\n\nOlá, seu código de verificação é: *${code}*\n\nPara sua segurança, não compartilhe este código.`
-    }
-  };
+// 1. Puxando as credenciais da Twilio
+    const twilioSid = process.env.TWILIO_SID;
+    const twilioToken = process.env.TWILIO_TOKEN;
+    const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${twilioSid}/Messages.json`;
+    
+    // 2. Autenticação Padrão da Twilio (Base64)
+    const auth = Buffer.from(`${twilioSid}:${twilioToken}`).toString('base64');
 
-    const response = await fetch(WHATSAPP_API_URL, {
+    // 3. Montando a mensagem para a Twilio
+    const params = new URLSearchParams();
+    params.append('From', 'whatsapp:+14155238886'); // Número oficial da Twilio
+    params.append('To', `whatsapp:+${fullPhone}`); 
+    params.append('Body', `💈 *Barber Bahia*\n\nOlá, seu código de verificação é: *${code}*\n\nPara sua segurança, não compartilhe este código.`);
+
+    // 4. Fazendo o disparo
+    const response = await fetch(twilioUrl, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${WHATSAPP_ACCESS_TOKEN}`,
+        'Authorization': `Basic ${auth}`,
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: JSON.stringify(payload),
+      body: params
     });
 
     if (!response.ok) {
