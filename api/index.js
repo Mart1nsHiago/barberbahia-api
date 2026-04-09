@@ -23,8 +23,13 @@ const WHATSAPP_API_URL = `https://graph.facebook.com/v18.0/${WHATSAPP_PHONE_ID}/
 async function sendWhatsAppCode(phoneNumber, name, code) {
   try {
     // Remove formatação do número
-    const cleanPhone = phoneNumber.replace(/\D/g, '');
-    const fullPhone = cleanPhone.startsWith('55') ? cleanPhone : `55${cleanPhone}`;
+const cleanPhone = phoneNumber.replace(/\D/g, '');
+    let fullPhone = cleanPhone.startsWith('55') ? cleanPhone : `55${cleanPhone}`;
+
+    // Se o número tiver 13 dígitos (55 + DDD + 9 + 8 dígitos) e o 5º caractere for um '9', ele corta esse 9 fora
+    if (fullPhone.length === 13 && fullPhone[4] === '9') {
+      fullPhone = fullPhone.substring(0, 4) + fullPhone.substring(5);
+    }
 
 // 1. Puxando as credenciais da Twilio
     const twilioSid = process.env.TWILIO_SID;
