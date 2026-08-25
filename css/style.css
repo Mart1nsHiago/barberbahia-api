@@ -78,7 +78,8 @@ nav ul a:hover{color:var(--white)}
 .product-visual-balm{background:linear-gradient(135deg,#151515,#20201b)}
 .product-visual-shampoo{background:linear-gradient(135deg,#151515,#242020)}
 .product-visual-kit{background:linear-gradient(135deg,#151515,#252017)}
-.product-emoji{font-size:3.4rem;filter:saturate(.85);z-index:1}
+.product-label{font-family:'Bebas Neue';font-size:3.8rem;letter-spacing:.08em;color:rgba(255,255,255,.82);line-height:.82;text-align:center;z-index:1;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.product-label::after{content:'';display:block;width:52px;height:1px;background:var(--gold);margin:.8rem auto 0;opacity:.8}
 .product-badge{position:absolute;right:1rem;top:.85rem;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);padding:.3rem .6rem;font-family:'Barlow Condensed';font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:var(--silver);z-index:1}
 .product-badge-gold{border-color:var(--gold);color:var(--gold)}
 .product-badge-red{border-color:var(--red);color:var(--red)}
@@ -92,7 +93,6 @@ nav ul a:hover{color:var(--white)}
 .product-foot strong{display:block;font-family:'Bebas Neue';font-size:1.55rem;font-weight:400;line-height:1;color:var(--gold);white-space:nowrap}
 .product-foot a{background:var(--red);color:var(--white);text-decoration:none;text-transform:uppercase;letter-spacing:.12em;padding:.7rem .95rem;white-space:nowrap;transition:background .25s,transform .2s}
 .product-foot a:hover{background:#a93226;transform:translateY(-1px)}
-.product-foot a:hover{color:var(--gold)}
 
 /* ABOUT */
 .about{display:grid;grid-template-columns:1fr 1fr;min-height:60vh}
