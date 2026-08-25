@@ -65,6 +65,35 @@ nav ul a:hover{color:var(--white)}
 .srv-desc{font-size:.78rem;color:var(--dim);margin-top:.15rem}
 .srv-price{font-family:'Bebas Neue';font-size:1.5rem;color:var(--white);white-space:nowrap}
 
+/* PRODUCTS */
+.products{padding:6rem 3rem;background:var(--black);border-top:1px solid var(--border)}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;background:transparent}
+.product-card{background:var(--card);min-height:385px;border:1px solid var(--border);display:flex;flex-direction:column;transition:background .25s,border-color .25s;position:relative;overflow:hidden}
+.product-card:hover{background:#1a1a1a}
+.product-visual{height:145px;display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid var(--border);overflow:hidden}
+.product-visual::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 18px,rgba(255,255,255,.025) 19px 20px)}
+.product-visual-matte{background:linear-gradient(135deg,#151515,#24201f)}
+.product-visual-shine{background:linear-gradient(135deg,#151515,#24221d)}
+.product-visual-oil{background:linear-gradient(135deg,#151515,#182029)}
+.product-visual-balm{background:linear-gradient(135deg,#151515,#20201b)}
+.product-visual-shampoo{background:linear-gradient(135deg,#151515,#242020)}
+.product-visual-kit{background:linear-gradient(135deg,#151515,#252017)}
+.product-emoji{font-size:3.4rem;filter:saturate(.85);z-index:1}
+.product-badge{position:absolute;right:1rem;top:.85rem;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);padding:.3rem .6rem;font-family:'Barlow Condensed';font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:var(--silver);z-index:1}
+.product-badge-gold{border-color:var(--gold);color:var(--gold)}
+.product-badge-red{border-color:var(--red);color:var(--red)}
+.product-info{padding:1.35rem 1.4rem 1.15rem;display:flex;flex-direction:column;flex:1}
+.product-category{font-family:'Barlow Condensed';font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem}
+.product-info h3{font-family:'Barlow Condensed';font-size:1.25rem;line-height:1.12;font-weight:600;color:var(--silver2)}
+.product-detail{font-size:.68rem;color:var(--dim);margin-top:.35rem}
+.product-info p{font-size:.76rem;line-height:1.55;color:var(--silver);margin-top:.8rem}
+.product-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:.75rem;margin-top:auto;padding-top:1rem;border-top:1px solid var(--border);font-family:'Barlow Condensed';font-size:.72rem;color:var(--dim)}
+.product-foot small{display:block;font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.product-foot strong{display:block;font-family:'Bebas Neue';font-size:1.55rem;font-weight:400;line-height:1;color:var(--gold);white-space:nowrap}
+.product-foot a{background:var(--red);color:var(--white);text-decoration:none;text-transform:uppercase;letter-spacing:.12em;padding:.7rem .95rem;white-space:nowrap;transition:background .25s,transform .2s}
+.product-foot a:hover{background:#a93226;transform:translateY(-1px)}
+.product-foot a:hover{color:var(--gold)}
+
 /* ABOUT */
 .about{display:grid;grid-template-columns:1fr 1fr;min-height:60vh}
 .about-vis{background:var(--card);position:relative;overflow:hidden;border-right:1px solid var(--border);display:flex;align-items:center;justify-content:center}
@@ -251,6 +280,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 3r
   .about{grid-template-columns:1fr}
   .about-vis{height:300px}
   .about-big{font-size:12rem}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
   .cta-band{flex-direction:column;text-align:center;gap:2rem}
   .hours{grid-template-columns:1fr}
   .hours-block{border-right:none;border-bottom:1px solid var(--border)}
@@ -258,4 +288,9 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:2rem 3r
   .form-grid{grid-template-columns:1fr}
   .book-nav{padding:1rem 1.5rem}
   .book-steps{display:none}
+}
+@media(max-width:560px){
+  .products{padding:4rem 1.5rem}
+  .product-grid{grid-template-columns:1fr}
+  .product-card{min-height:330px}
 }
